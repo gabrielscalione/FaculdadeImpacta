@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <h1>Cadastro</h1>
+    
+    
+    <fieldset>
+        <legend>Formulário</legend>
+        <form action="salvar" method="POST" name="formulario" id="formulario">
+            <label for="rg">RG:</label>
+            <input id="rg" name = "rg" type="text">
+            <br><br>
+            <label for="primeiro_nome">Primeiro nome:</label>
+            <input id="primeiro_nome" name="primeiro_nome" type="text">
+            <br><br>
+            <label for="ultimo_nome">Último nome:</label>
+            <input id="ultimo_nome" name="ultimo_nome" type="text">
+            <br><br>
+            <label for="telefone">Telefone:</label>
+            <input id="telefone" name="telefone" type="number">
+            <br><br>
+            <label for="email">Email:</label>
+            <input id="email" name="email" type="text">
+            <br><br>
+            <label for="comentarios">Comentarios:</label>
+            <input id="comentarios" name="comentarios" type="text">
+            <br><br>
+            <button type="submit">Enviar</button>
+        </form>
+    </fieldset>
+    <fieldset>
+        <legend>Consultar</legend>
+        <form action="consulta" method="POST" name="formulario2" id="formulario2">
+            <label for="rg_consulta">RG:</label>
+            <input id="rg_consulta" name="rg_consulta" type="text">
+            <br><br>
+            <button type="submit">Consultar</button>
+        </form>
+    </fieldset>
+
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js" charset="utf-8"></script>
+    <script src="js/script.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>

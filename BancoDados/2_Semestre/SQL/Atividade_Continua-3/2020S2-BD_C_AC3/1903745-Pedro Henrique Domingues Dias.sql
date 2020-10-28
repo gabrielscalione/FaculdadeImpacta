@@ -1,0 +1,83 @@
+USE MASTER 
+DROP DATABASE IF EXISTS CD
+GO
+CREATE DATABASE CD
+GO
+ USE CD
+CREATE TABLE FORNECEDOR_CD
+(
+ID_FORNECEDOR_CD  INT IDENTITY(1,1) PRIMARY KEY,
+NOME_FORNECEDOR VARCHAR(MAX)
+)
+CREATE TABLE CD
+(
+ID_CD INT IDENTITY(1,1) PRIMARY KEY,
+NOME_CD VARCHAR(200) UNIQUE,
+CODIGO_CD VARCHAR(200)  ,
+ID_FORNECEDOR_CD INT FOREIGN KEY REFERENCES FORNECEDOR_CD(ID_FORNECEDOR_CD)
+)
+CREATE TABLE CLIENTE_CD
+(
+ID_CLIENTE_CD INT IDENTITY(1,1) PRIMARY KEY,
+NOME_CLIENTE_CD VARCHAR(200)
+)
+CREATE TABLE PEDIDO_CD
+(
+ID_PEDIDO_CD INT IDENTITY(1,1) PRIMARY KEY,
+NUMERO_PEDIDO_CD INT  ,
+QUANTIDADE_TOTAL INT,
+VALOR_TOTAL DECIMAL(10,2),
+DATA DATE,
+ID_CLIENTE_CD INT FOREIGN KEY REFERENCES CLIENTE_CD(ID_CLIENTE_CD)
+)
+CREATE TABLE DETALHE_PEDIDO_CD
+(
+ID_DETALHE_PEDIDO_CD INT IDENTITY(1,1) PRIMARY KEY,
+ID_CD  INT FOREIGN KEY REFERENCES CD(ID_CD),
+QUANTIDADE INT,
+VALOR DECIMAL(10,2),
+ID_PEDIDO_CD INT FOREIGN KEY REFERENCES PEDIDO_CD(ID_PEDIDO_CD)
+)
+INSERT INTO FORNECEDOR_CD  VALUES 
+('FORNECEDOR CD Z'),('FORNECEDOR CD X')
+INSERT INTO CD (NOME_CD,ID_FORNECEDOR_CD,CODIGO_CD) VALUES
+('CD Z',1,'Z_CD'),('CD Z2',1,'Z2_CD'),('CD X',2,'X_CD'),('CD X2',2,'X2_CD')
+,('CD ZY',2,'ZY_CD')
+INSERT INTO CLIENTE_CD VALUES
+('CD ZX INC.') , ('XXZ CD VENDAS SA')
+INSERT INTO PEDIDO_CD 
+(NUMERO_PEDIDO_CD,QUANTIDADE_TOTAL,VALOR_TOTAL,DATA,ID_CLIENTE_CD) VALUES
+(100,2,1000,'2000-01-01',1),
+(150,1,500,'2000-02-01',2),
+(180,1,500,'2000-03-01',2),
+(190,3,1500,'2000-04-01',2)
+INSERT INTO DETALHE_PEDIDO_CD (ID_CD,QUANTIDADE,VALOR,ID_PEDIDO_CD) VALUES
+(1,1,500,1),
+(2,1,500,1),
+(1,1,500,2),
+(2,1,500,3), 
+(3,1,500,4),
+(4,2,1000,4)
+ /*
+ Ola Pedro Henrique Domingues Dias tudo bem com você? Preciso de uma ajuda aqui para entregar um relatório. Da uma força!
+1 - Poderia selecionar o nome dos CDS e o nome do fornecedor dos CDS 
+    onde o codigo do CD não  começe com X, ordenados pelo nome do CD?
+*/
+/*
+2 - Poderia selecionar o nome dos clientes a data do pedido do CD, quantidade e  valor
+    onde a data do pedido é maior que 2000-03-01?
+*/
+/*
+3 - Poderia criar uma tabela chamada [COMPRAS_CD] com os valores
+o nome do CD, o nome do cliente, data da compra ?
+*/
+
+/*
+4 - Poderia criar uma consulta, para buscar o NOME dos CDS que não tiveram nenhuma compra?
+(PS: OBRIGATÓRIO TER UM JOIN ENTRE A TABELA CD E PEDIDO_CD, 
+NADA DE SELECT * FROM CDS where NOME = XXX não!
+*/
+ /*
+5 - Poderia criar uma tabela chamada [COMPRAS_CD_FORNECEDOR] com os valores
+o nome do CD, quantidade do CD vendida, o valor e o nome do fornecedor onde o 
+nome do fornecedor não   termine com a letra Z? */

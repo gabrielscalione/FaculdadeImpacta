@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Chat</title>
+        <link rel="stylesheet" href="css/chat_style.css">
+    </head>
+    <body>
+        
+        <h1>Chat</h1>
+
+        <label for="nome1">Nome 1:</label>
+        <input id="nome1" type="text" style="width: 200px;">
+        <br><br>
+        <label for="nome2">Nome 2:</label>
+        <input id="nome2" type="text" style="width: 200px;">
+        <br><br>
+        <button id="atualizar">Atualizar</button>
+
+        <div class='container'>
+
+            <div class='box'>
+                <fieldset>
+                    <legend id="legend1"> <b>Pessoa 1</b> </legend>
+                    <div class='msg1'>
+
+                    </div> <br>
+                    <input type="text" id='mensagem1'>
+                    <button class="botao_pessoa" value="enviar-1">Enviar</button>
+                    <button class="botao_pessoa" value="limpar-1">Limpar</button>
+                </fieldset>
+            </div>
+
+            <div class='box'>
+                <fieldset>
+                    <legend id="legend2"><b>Pessoa 2</b></legend>
+                    <div class='msg2'>
+
+                    </div> <br>
+                    <input type="text" id='mensagem2'>
+                    <button class="botao_pessoa" value="enviar-2">Enviar</button>
+                    <button class="botao_pessoa" value="limpar-2">Limpar</button>
+                </fieldset>
+            </div>
+
+        </div>
+
+        <!-- Sempre colocar a tag script com o JQUERY em primeiro lugar -->
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js" charset="utf-8" type="text/javascript"></script>
+        <script src="js/chat_script.js" charset="utf-8" type="text/javascript"></script>        
+    </body>
+</html>

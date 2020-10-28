@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+
+<html> 
+
+    <head>
+
+        <meta charset="utf-8"> 
+        <title>Formulário</title> 
+        <link rel="stylesheet" href="css/formulario_style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <style>
+
+          body {
+            text-align: center;
+          }
+          /* input[type="text"] {
+            width: 100px;
+            height: 100px;
+            background-color: #0000FF;
+            color:white;
+          } */
+          fieldset{
+             display: inline-block;
+            /* width: 500px; */
+
+          }
+
+        </style>
+
+    </head>
+        
+    <body>
+      <fieldset>
+        <form action="qq_coisa" method="POST" name="cadastro">
+
+          <label for="primeiro_nome">Primeiro Nome:</label>
+          <input id="primeiro_nome" name="primeiro_nome" type="text">
+          <br><br>
+          <label for="ultimo_nome">Último Nome:</label>
+          <input id="ultimo_nome" name="ultimo_nome" type="text">
+          <br><br>
+          <label for="telefone">Telefone: </label>
+          <input id="telefone" name="telefone" type="number">
+          <br><br>
+          <button type="submit">Enviar</button>
+  
+        </form>
+      </fieldset>
+      
+      <br>
+  
+      <fieldset>
+        <form action="login" method="POST" name="login">
+
+          <label for="usuario">Usuário:</label>
+          <input id="usuario" name="usuario" type="text">
+          <br><br>
+          <label for="senha">Senha:</label>
+          <input id="senha" name="senha" type="password">
+          <br><br>
+          <button type="submit">Entrar</button>
+  
+        </form>
+      </fieldset>
+      
+
+      <br>
+
+
+      <fieldset>
+        <form action="sei_la" method="POST" name="sem_criatividade">
+
+          <label for="cor">Cor:</label>
+          <input id="cor" name="cor" type="color">
+          <br><br>
+  
+          <label for="data">Data:</label>
+          <input name="data" id="data" type="date">
+          <br><br>
+  
+          <label for="tempo">Tempo:</label>
+          <input name="tempo" id="tempo" type="time">
+          <br><br>
+  
+          <label for="data_tempo">Data e Hora:</label>
+          <input name="data_tempo" id="data_tempo" type="datetime-local">
+          <br><br>
+  
+          <label for="mes">Mês</label>:
+          <input type="month" name="mes" id="mes"> 
+          <br/><br/>
+  
+          <label for="semana">Semana</label>:
+          <input type="week" name="semana" id="semana"> 
+          <br/><br/>
+  
+          <label for="email">E-Mail</label>: 
+          <input type="email" name="email" id="email" /> 
+          <br/><br/>
+  
+          <label for="url">URL</label>: 
+          <input type="url" name="url" id="url" /> 
+          <br/><br/>
+  
+          <label for="busca">Busca</label>: 
+          <input type="search" name="busca" id="busca" /> 
+          <br/><br/>
+  
+          <label for="intervalo">Intervalo</label>: 
+          <input type="range" name="intervalo" id="intervalo" /> 
+          <br/><br/>
+  
+          <button type="submit">Entrar</button>
+  
+        </form>
+      </fieldset>
+      
+
+      <br>
+
+      <fieldset>
+        <form action="teste" name="teste" method="POST">
+
+          <label for="disciplina1">Disciplina</label>
+          <select name="disciplina1" id="disciplina1">
+            <option value="1">Tecweb</option>
+            <option value="2" selected>Desenv</option>
+            <option value="3">DevOps</option>
+          </select><br><br>
+  
+          <label for="disciplina2">Tecweb</label>
+          <input id="disciplina2" name="disciplina2" type="checkbox" value="Tecweb"><br>
+          
+          <label for="disciplina3">Desenv</label>
+          <input id="disciplina3" name="disciplina3" type="checkbox" value="Desenv"><br>
+          
+          <label for="disciplina4">DevOps</label>
+          <input id="disciplina4" name="disciplina4" type="checkbox" value="DevOps"><br><br>
+          
+  
+  
+  
+          <label for="disciplina5">Tecweb</label>
+          <input id="disciplina5" name="disciplina" type="radio" value="Tecweb"><br>
+          
+          <label for="disciplina6">Desenv</label>
+          <input id="disciplina6" name="disciplina" type="radio" value="Desenv"><br>
+          
+          <label for="disciplina7">DevOps</label>
+          <input id="disciplina7" name="disciplina" type="radio" value="DevOps"><br><br>
+          
+          <button type="submit">Entrar</button>
+  
+        </form>
+      </fieldset>
+      
+
+
+      <br><br><br><br><br><br><br><br><br><br>
+      <br><br><br><br><br><br><br><br><br><br>
+      <br><br><br><br><br><br><br><br><br><br>
+      <br><br><br>
+
+    </body>
+    <!-- 
+    Cores (R,G,B): 0 a 255 -> 00 a FF
+    R = 223 | G = 58 | B = 58 -> #DF3A3A
+    https://www.rapidtables.com/convert/number/hex-to-decimal.html
+    Decimal: 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15
+    Hex: 0,1,2,3,4,5,6,7,8,9,A,B,C,D,E,F
+    -->
+
+
+
+
+
+</html>

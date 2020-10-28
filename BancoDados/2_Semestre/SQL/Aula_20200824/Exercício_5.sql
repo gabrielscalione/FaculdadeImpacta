@@ -1,0 +1,16 @@
+/*
+	5. Alter table
+*/
+
+-- Altere a tabela VIDEO_GAME adicione a coluna ANO_LANCAMENTO INT
+ALTER TABLE VIDEO_GAME ADD ANO_LANCAMENTO INT			--Essa coluna já estava criada na criação da Tabela VIDEO_GAME
+
+-- Altere a tabela EMPRESA remova a coluna VALOR_MERCADO
+ALTER TABLE EMPRESA DROP COLUMN VALOR_MERCADO
+
+-- Altere a tabela VIDEO_GAME adicione a constraint UNIQUE para nome
+ALTER TABLE VIDEO_GAME ADD CONSTRAINT uq_VIDEO_GAME UNIQUE (NOME)
+
+-- Altere a tabela VIDEO_GAME altere a coluna PAIS para NOT NULL
+ALTER TABLE VIDEO_GAME ADD PAIS VARCHAR(100)
+ALTER TABLE VIDEO_GAME ALTER COLUMN PAIS VARCHAR(100) NOT NULL

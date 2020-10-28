@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+  <head> 
+    <style>
+  
+   /* label underline focus color */
+   .input-field input:focus {
+     border-bottom: 1px solid #ff0000 !important;
+     box-shadow: 0 1px 0 0 #ff0000 !important;
+   }
+   /* valid color */
+   .input-field input.valid {
+     border-bottom: 1px solid #ff0000 !important;
+     box-shadow: 0 1px 0 0 #ff0000 !important;
+   }
+   /* invalid color */
+   .input-field input.invalid {
+     border-bottom: 1px solid #ff0000 !important;
+     box-shadow: 0 1px 0 0 #ff0000 !important;
+   }
+   /* icon prefix focus color */
+   .input-field .prefix.active {
+     color: #ff0000 !important;
+   }
+        
+  .card-panel{
+    padding-top: 1px;
+  }
+
+    html {background-color: #e4e5e6;
+          }
+    
+  #div_p{
+    position:relative;
+  }
+      
+
+    </style> 
+
+    <meta charset="utf-8"> 
+    <title>Teste - Login</title> 
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    
+  </head> 
+
+  <body> 
+
+ 
+    <div id="div_p" class="center-align container" style="top:0px">
+      <h6 class="logo-text" style="font-size: 20px;color:#ff0000;"><b>Login</b></h6>
+      <h6 class="logo-text" style="font-size: 20px;color:#424242"><b>Sistema de XYZ</b></h6> 
+      <form action="/" method="POST" id="formulario" class="row"> 
+        <div class="col s12 m8 l8 xl6 offset-m2 offset-l2 offset-xl3">
+          <div class="card-panel white">
+            <div>
+              <h6 class="valign-wrapper" style="color:#424242"><i class="material-icons">vpn_key</i><b>&nbsp; Autenticação</b></h6>
+            </div>
+            <div class="divider"></div>
+            <br>
+            <div class="left-align">
+              <div class="row">
+                <div class="input-field col s12">
+                  <label style="font-size: 15px;color:#424242" for="user"><b>Conta</b></label>
+                  <input placeholder="Digite sua conta" id="user" name="user" type="text" class="validate">
+                </div>
+                <div class="input-field col s12">
+                  <label style="font-size: 15px;color:#424242" for="pass"><b>Senha</b></label>
+                  <input placeholder="Digite sua senha" id="pass" name="pass" type="password" class="validate">
+                </div>
+                
+                <div class="col s6">
+                  <br>
+                  <button class="btn waves-effect waves-light" style="background-color:#ff0000;" type="submit">Entrar <!--type="submit"-->
+                    <i class="material-icons right">send</i>
+                  </button>
+                </div>
+                <div class="col s6">
+                  <br>
+                  <label style="font-size:13px;color: #ff0000"><b>{{ status }}</b></label>
+                </div>
+          
+              </div>
+              
+
+            </div>
+          </div>
+        </div>
+        
+      </form> 
+    </div> 
+  
+    
+
+    
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script> 
+  <script>
+
+    
+  </script>
+
+  </body>
+</html>

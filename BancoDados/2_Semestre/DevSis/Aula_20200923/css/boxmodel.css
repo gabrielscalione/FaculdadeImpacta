@@ -1,0 +1,41 @@
+div{
+    width: 100px;
+    height: 100px;
+    background-color: gray;
+    border: 2px solid white;
+}
+/* div.teste1{
+    float: left;
+    
+}
+div.teste2{
+    float: left;
+    clear: left;
+} */
+
+div.teste1{
+    display: inline-block;
+    background-color: gray;
+}
+div.teste2{
+    display: inline-block;
+    background-color: gray;
+}
+
+div.teste3{
+    display: block;
+    background-color: gray;
+}
+div.teste4{
+    display: block;
+    background-color: gray;
+}
+
+div.teste5{
+    display: inline;
+    background-color: gray;
+}
+div.teste6{
+    display: inline;
+    background-color: gray;
+}

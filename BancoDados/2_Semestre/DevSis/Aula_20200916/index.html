@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Teste CSS</title>
+        <link rel="stylesheet" href="css/index_style.css">
+    </head>
+    
+    <style>
+            
+        body{
+            /* background-image: url('https://armyyazilim.com/wp-content/uploads/2019/10/css.png'); */
+            /* background-repeat: no-repeat; */
+            background-color: gray;
+            font-size: 30px;
+        }
+        p {
+            font-size: 1em; 
+            /* font-size: 50%;  */
+        }
+
+        .teste1{
+            background-color: #000000;
+            color: #FFFFFF;
+        }
+
+        
+        p.teste3{
+            background-color: #0000FF;
+            color: #FF0000;
+        }
+        
+
+        .direita{
+            text-align: right;
+        }
+        .centro{
+            text-align: center;
+        }
+
+        #direita_1{
+            text-align: right;
+        }
+        p#centro_1{
+            text-align: center;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            color: gray;
+            font-size: 20px;
+            font-family: "sans serif";
+        }
+        h1.azul{
+            color: #0000FF;
+        }
+        #verde{
+            color: #00FF00;
+            font-family: arial;
+        }
+
+        a{
+            color: #0000FF;
+        }
+
+        a.efeitos_especiais:hover{
+            color:#FF00FF;
+            /* font-size: 30px; */
+            font-family: arial;
+        }   
+        /* a.efeitos_especiais:visited{
+            color:#00FF00;
+        } */
+        a.efeitos_especiais:active{
+            color:#FF0000;
+        }
+
+        input:focus{
+            background-color: red;
+        }
+
+        p.mudar:first-letter{
+            color: green;
+        }
+        p.mudar:first-line{
+            color: blue;
+        }
+        p.mudar:first-child{
+            background-color: yellow;
+        }
+        p.mudar:last-child{
+            background-color: #666666;
+        }
+
+        .pt_teste:before {
+            content: "Importante! ";
+        }
+
+        .pt_teste:after {
+            content: " *";
+        }
+
+        span:lang(en){
+            background-color: red;
+        }
+
+        .mudar_fonte{
+            font-weight: bold;
+            /* font-style: italic; */
+            /* font-style: oblique; */
+            font-style: none;
+
+            text-decoration: underline;
+            /* text-decoration: overline; */
+            /* text-decoration: line-through; */
+
+            /* text-transform: uppercase; */
+            /* text-transform: lowercase; */
+            text-transform: capitalize;
+        }
+        .bordas{
+            /* border: 10px solid red; */
+            /* border: 5px dashed red; */
+
+            border-top: 2px solid red;
+            border-bottom: 2px double blue;
+            border-left: 5px dashed green;
+            border-right: 10px dotted yellow;
+            border-radius: 30px 20px 10px 5px;
+        }
+        
+    </style> 
+
+</head>
+
+<body> 
+    
+    <p class="teste1">Olá mundo!</p>
+    <p class="teste2">Olá mundo!</p>
+    <p style="background-color: #000000;color: #FFFFFF;">Olá mundo!</p>
+
+    <p class="teste3">sdffdsfdafsdsfd</p>
+    <p class="teste3">sfdsfsdfdsf</p>
+    <p class="teste3">sdffdsfsdfsd</p>
+    <p class="teste3">sdffdsdsfsfdd</p>
+
+    <textarea class="teste3" cols="30" rows="10">
+        tedljsfdloijufdaouhifdaohudfaouhfdafad
+        jbafdkjbafdjkbfadjbkdfajbadfbjadfjbfadjb
+        jbadjadfjbafdjbafdjafdjadfjfadnljadfjadfjf
+        nijsfnfsdifsifsisfisfi
+    </textarea>
+
+    <p class="direita">Alinhado à direita</p>
+    <p class="centro">Centralizar</p>
+
+    <p id="direita_1">Alinhado à direita</p>
+    <p id="centro_1">Centralizar</p>
+
+    <h1 class="azul">Teste 1</h1>
+    <h2 id="verde">Teste 2</h2>
+    <h3>Teste 3</h3>
+    <h4>Teste 4</h4>
+    <h5>Teste 5</h5>
+    <h6>Teste 6</h6>
+
+    <a class="efeitos_especiais" href="https://www.citroen.com.br/" target="_blank">Citroen</a><br>
+    <a href="https://www.toyota.com.br/" target="_blank">Toyota</a><br>
+    <a href="https://www.vw.com.br/" target="_blank">VW</a><br>
+    <a href="https://www.fiat.com.br/" target="_blank">Fiat</a><br>
+    <a class="efeitos_especiais" href="https://www.honda.com.br/" target="_blank">Honda</a>
+    <br><br>
+    <input type="text" value="usuário">
+    <br><br>
+    <fieldset>
+        <div>
+            <p class="mudar"> Primeira letra verde e fundo amarelo</p>
+            <p class="mudar">Primeira linha azul <br>
+            Segunda linha normal</p>
+            <p class="mudar">dssddsds</p>
+            <p class="mudar">dsdssddewr4eg</p>
+            <p class="mudar">wrfwgwrgrwerwrewg</p>
+        </div>
+    </fieldset>
+    
+    <br><br>
+
+    <span class="pt_teste">Notícia</span><br>
+    <span class="pt_teste">dffdf</span><br>
+    <span class="pt_teste">fwedwfdws</span><br>
+    <span class="pt_teste">sdfdsfdss</span><br>
+    <span class="pt_teste">dsdsf</span><br><br>
+
+    <span lang="en">News</span><br><br>
+
+    <span class="mudar_fonte"> teste</span>
+    <span> <b>teste</b> </span>
+    <span> <u>teste</u> </span>
+    <span> <i>teste</i> </span>
+
+    <div class='bordas'>
+        Texto X
+    </div>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+    </body>
+</html>

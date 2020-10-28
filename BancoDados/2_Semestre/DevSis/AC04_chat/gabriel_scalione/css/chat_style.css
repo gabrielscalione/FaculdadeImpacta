@@ -1,0 +1,49 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    text-align: center;
+    
+}
+.msg1,.msg2{
+    overflow-y: scroll;
+    border: 1px solid black;
+    height: 80%;
+    width: 100%;
+    padding: 10px;
+    text-align: left;
+}
+.container{
+    display: flex;
+    flex-flow: row wrap;
+    align-content: flex-start;
+    justify-content: center;
+}
+fieldset{
+    padding: 10px;
+    margin: 10px;
+    height: 400px;
+    width: 400px;
+}
+input{
+    width: 68%;
+}
+/* .texto_msg,.texto_msg_copia{
+    cursor: pointer;
+} */
+.texto_msg:hover,.texto_msg_copia:hover{
+    color: blue;
+    cursor: pointer;
+}
+.op_deletar{
+    color:red;
+}
+#um,#todos{
+    cursor: pointer;
+    text-decoration: underline;
+}
+.div_msg{
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+}

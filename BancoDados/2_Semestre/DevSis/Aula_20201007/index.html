@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 08</title>
+    <link rel="stylesheet" href="css/exemplo_style.css">
+</head>
+<body>
+
+    <h1>Exemplo java</h1>
+
+    <label for="nome">Nome:</label>
+    <input id="nome" type="text" maxlength="11">
+
+    <p id="p1" name="paragrafo" class="classe_paragrafo">
+        Toyota Motor é uma fabricante automotivo japonês com sede na Toyota, província de Aichi, 
+        no Japão. Em março de 2014, a corporação multinacional era composta por 338.875 
+        funcionários em todo o mundo e, em fevereiro de 2016, era a 13ª maior empresa do mundo por receita
+    </p>
+
+    <p id="p2" name="paragrafo" class="classe_paragrafo">
+        Em 2016, comercializou 10,18 milhões de unidades, somando as marcas Toyota, Lexus, Daihatsu e Hino Motors. 
+        Desta maneira, ficou abaixo dos números da sua concorrente, a europeia Grupo Volkswagen (10,3 milhões em vendas), 
+        ocupando o 2° lugar no ranking em vendas mundiais de veículos
+    </p>
+
+    <p id="p3" name="paragrafo" class="classe_paragrafo">
+        A Toyota é a líder mundial em vendas de veículos elétricos híbridos e uma das maiores empresas que incentivam a 
+        adoção de veículos híbridos em todo o mundo. As vendas globais acumuladas dos modelos de automóveis de passageiros 
+        híbridos da Toyota e da Lexus ultrapassaram o marco de 9 milhões em abril de 2016. A família de automóveis Prius constituem os modelos 
+        híbridos mais vendidos do mundo, com quase 5,7 milhões de unidades vendidas até 30 de abril de 2016.[7]
+    </p>
+
+    <p id="p4" name="paragrafo">
+        A Toyota é a líder mundial em vendas de veículos elétricos híbridos e uma das maiores empresas que incentivam a 
+        adoção de veículos híbridos em todo o mundo. As vendas globais acumuladas dos modelos de automóveis de passageiros 
+        híbridos da Toyota e da Lexus ultrapassaram o marco de 9 milhões em abril de 2016. A família de automóveis Prius constituem os modelos 
+        híbridos mais vendidos do mundo, com quase 5,7 milhões de unidades vendidas até 30 de abril de 2016.[7]
+    </p>
+
+    <h3>Formulário 1</h3>
+    <fieldset>
+        <form action="/enviar" method="POST" id="formulario1">
+            <label for="idade">Idade:</label>
+            <input id="idade" type="number"> 
+            <br><br>
+            <label for="cpf">CPF:</label>
+            <input id="cpf" type="text" maxlength="11">
+            <br><br>
+            <button type="submit" onsubmit="verificar_formulario2();">Enviar</button>
+        </form>
+    </fieldset>
+
+    <script src="js/exemplo_script.js" charset="UTF-8" type="text/javascript">   </script>
+
+
+</body>
+</html> 
