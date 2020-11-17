@@ -103,12 +103,12 @@ def consultar_idProduto():
 def alterar_dados():
     info = flask.request.form.to_dict()
 
-    descricao = info['descricao']
-    estoque_minimo = info['estoque_minimo']
-    estoque_maximo = info['estoque_maximo']
-    qtde = info['qtde']
-    valor_unitario = info['valor_unitario']
-    data_entrada = info['data_entrada']
+    descricao = info['descricao_alt']
+    estoque_minimo = info['estoque_minimo_alt']
+    estoque_maximo = info['estoque_maximo_alt']
+    qtde = info['qtde_alt']
+    valor_unitario = info['valor_unitario_alt']
+    data_entrada = info['data_entrada_alt']
 
     if (descricao == ""):
         return flask.render_template('home.html',status="Preencha todos os campos")
@@ -135,15 +135,25 @@ def alterar_dados():
 
         sql_update = sql_update[:-1]        
         sql_update = sql_update + f' WHERE descricao = "{descricao}"'
- 
+
+        # Altera tudo
+        # sql_update = f"""
+        #         UPDATE tbl_Produto SET descricao = "{descricao}", estoque_minimo = "{estoque_minimo}", 
+        #         estoque_maximo = "{estoque_maximo}",  qtde = "{qtde}", 
+        #         valor_unitario = {valor_unitario} WHERE descricao = "{descricao}"
+        # """ 
+
         cursor.execute(sql_update)
         banco_de_dados.commit()
         return flask.render_template('home.html',status=f"Produto: {descricao} alterado com sucesso")
 
+
+
+
 @app.route('/deletar',methods=['POST'])
 def deletar_dados():
     info = flask.request.form.to_dict()
-    descricao = info['descricao_del']
+    descricao = info['produto_del']
 
     if descricao == '':
         return flask.render_template('home.html',status="Preencha todos os campos")
@@ -161,7 +171,7 @@ def deletar_dados():
     if len(resultado) == 0:
         return flask.render_template('home.html',status=f"Produto: {descricao} não cadastrado")
     else:
-        sql_delete = f'DELETE FROM tbl_Produto WHERE Produto = "{descricao}"'
+        sql_delete = f'DELETE FROM tbl_Produto WHERE descricao = "{descricao}"'
         cursor.execute(sql_delete)
         banco_de_dados.commit()
         return flask.render_template('home.html',status=f"Produto: {descricao} deletado sucesso")
