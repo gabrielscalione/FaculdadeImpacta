@@ -3,7 +3,8 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Home</title>
+        <title>GLIMY - Controle de Estoque</title>
+        <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0rdsivpnvT7JOZpp7vpNzXGIc3tbUB2jVng&usqp=CAU">
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
@@ -14,126 +15,162 @@
             <li><a id="menu_alterar">Alterar</a></li>
             <li><a id="menu_deletar">Deletar</a></li>
         </ul>
+
         <br>
-        <span style="color:red;"><b>{{ status }}</b></span>  
+        <span style="color:black;">{{ status }}</span>  
         
-        <div id="consultar" style="display: '';">
+        <div id="consultar" style="display: '';" class = "container">
 
             <h2>Consultar</h2>
 
             <fieldset>
-                <legend>Consultar</legend>
                 <form action="consultar_produto" method="POST" name="formulario2" id="formulario2">
-                    <label for="produto_consulta">Produto:</label>
-                    <input id="produto_consulta" name="produto_consulta" type="text">
-                    <br><br>
-                    <button type="submit">Consultar</button>
+                    <ul class="flex-outer">
+                        <li>
+                            <label for="produto_consulta">Produto:</label>
+                            <input id="produto_consulta" name="produto_consulta" type="text" placeholder="Nome do produto ou *">
+                        </li>
+                        <li>
+                            <button type="submit">Consultar</button>
+                        </li>
+                    </ul>
                 </form>
             </fieldset>
 
             <fieldset>
-                <legend>Consultar</legend>
                 <form action="consultar_idProduto" method="POST" name="formulario5" id="formulario5">
-                    <label for="consultar_idProduto">ID do Produto:</label>
-                    <input id="consultar_idProduto" name="consultar_idProduto" type="number">
-                    <br><br>
-                    <button type="submit">Consultar</button>
+                    <ul class="flex-outer">
+                        <li>
+                            <label for="consultar_idProduto">ID do Produto:</label>
+                            <input id="consultar_idProduto" name="consultar_idProduto" type="number" placeholder="ID do produto">
+                        </li>
+                        <li>
+                            <button type="submit">Consultar</button>
+                        </li>
+                    </ul>
                 </form>
             </fieldset>
 
-            <h1>Resultados</h1>
+            <h2>Resultados</h2>
 
-            <ul>
+            <table class="highlight" class="responsive-table">
+                <thead>
+                    <tr>
+                        <th align= middle width=100 bgcolor= #DAA520> ID </th>
+                        <th align= middle width=100 bgcolor= #DAA520> Produto</th>
+                        <th align= middle width=100 bgcolor= #DAA520> Estoque Mínimo</th>
+                        <th align= middle width=100 bgcolor= #DAA520> Estoque Máximo</th>
+                        <th align= middle width=100 bgcolor= #DAA520> Quantidade</th>
+                        <th align= middle width=100 bgcolor= #DAA520> Valor Unitario</th>
+                        <th align= middle width=100 bgcolor= #DAA520> Data de Entrada</th>
+                    </tr>
+                </thead>
                 {% for item in resultado %}
-        
-                    {% for i in item %}
-                        <li> <b>{{ loop.index }} - {{ i[0] }}:</b>  {{ i[1] }}</li>
-                    {% endfor %}
-        
-                    {% if loop.last == false %}
-                        <p> ---------------- </p>   
-                    {% else %}
-                        <p> ####################################### </p>  
-                    {% endif %}
+                    
+                        <tr>
+                            {% for i in item %}
+                                <td align= middle width=150>{{ i[1] }}</td>
+                            {% endfor %}
+                        </tr>
                     
                 {% endfor %}
-            </ul>
+            </table>
             
             <!-- {% block bloco_resultado %}
             {% endblock %} -->
 
         </div>
 
-        <div id="cadastrar" style="display: none;" >
+        <div id="cadastrar" style="display: none;" class = "container">
             <h2>Cadastrar</h2>
         
             <fieldset>
-                <legend>Formulário</legend>
                 <form action="cadastrar" method="POST" name="formulario" id="formulario">
-                    <label for="descricao">Produto:</label>
-                    <input id="descricao" name="descricao" type="text">
-                    <br><br>
-                    <label for="estoque_minimo">Estoque Mínimo:</label>
-                    <input id="estoque_minimo" name="estoque_minimo" type="number">
-                    <br><br>
-                    <label for="estoque_maximo">Estoque Máximo:</label>
-                    <input id="estoque_maximo" name="estoque_maximo" type="number">
-                    <br><br>
-                    <label for="qtde">Quantidade:</label>
-                    <input id="qtde" name="qtde" type="number">
-                    <br><br>
-                    <label for="valor_unitario">Valor Unitario:</label>
-                    <input id="valor_unitario" name="valor_unitario" type="number" step="0.01" value="0.00" placeholder="0.00">
-                    <br><br>
-                    <label for="data_entrada">Data de Entrada:</label>
-                    <input id="data_entrada" name="data_entrada" type="date">
-                    <br><br>
-                    <button type="submit">Cadastrar</button>
-    
+                    <ul class="flex-outer">
+                        <li>
+                            <label for="descricao">Produto:</label>
+                            <input id="descricao" name="descricao" type="text" placeholder="Nome do produto">
+                        </li>
+                        <li>
+                            <label for="estoque_minimo">Estoque Mínimo:</label>
+                            <input id="estoque_minimo" name="estoque_minimo" type="number" placeholder="Número Mínimo">
+                        </li>
+                        <li>
+                            <label for="estoque_maximo">Estoque Máximo:</label>
+                            <input id="estoque_maximo" name="estoque_maximo" type="number" placeholder="Número Máximo">
+                        </li>
+                        <li>
+                            <label for="qtde">Quantidade:</label>
+                            <input id="qtde" name="qtde" type="number" placeholder="Quantidade atual">
+                        </li>
+                        <li>
+                            <label for="valor_unitario">Valor Unitario:</label>
+                            <input id="valor_unitario" name="valor_unitario" type="number" step="0.01" placeholder="0,00">
+                        </li>
+                        <li>
+                            <label for="data_entrada">Data de Entrada:</label>
+                            <input id="data_entrada" name="data_entrada" type="date">
+                        </li>
+                        <li>
+                            <button type="submit">Cadastrar</button>
+                        </li>
+                    </ul>
                 </form>
             </fieldset>
         </div>
 
-        <div id="alterar" style="display: none;" >
+        <div id="alterar" style="display: none;" class = "container">
             <h2>Alterar</h2>
         
             <fieldset>
-                <legend>Formulário</legend>
                 <form action="alterar_dados" method="POST" name="formulario3" id="formulario3">
-                    <label for="descricao_alt">Produto:</label>
-                    <input id="descricao_alt" name="descricao_alt" type="text">
-                    <br><br>
-                    <label for="estoque_minimo_alt">Estoque Mínimo:</label>
-                    <input id="estoque_minimo_alt" name="estoque_minimo_alt" type="number">
-                    <br><br>
-                    <label for="estoque_maximo_alt">Estoque Máximo:</label>
-                    <input id="estoque_maximo_alt" name="estoque_maximo_alt" type="number">
-                    <br><br>
-                    <label for="qtde_alt">Quantidade:</label>
-                    <input id="qtde_alt" name="qtde_alt" type="number">
-                    <br><br>
-                    <label for="valor_unitario_alt">Valor Unitário:</label>
-                    <input id="valor_unitario_alt" name="valor_unitario_alt" type="number" step="0.01" value="0.00" placeholder="0.00">
-                    <br><br>
-                    <label for="data_entrada_alt">Data de Entrada:</label>
-                    <input id="data_entrada_alt" name="data_entrada_alt" type="date">
-                    <br><br>
-                    <button type="submit">Alterar</button>
-    
+                    <ul class="flex-outer">
+                        <li>
+                            <label for="descricao_alt">Produto:</label>
+                            <input id="descricao_alt" name="descricao_alt" type="text" placeholder="Nome do produto">
+                        </li>
+                        <li>
+                            <label for="estoque_minimo_alt">Estoque Mínimo:</label>
+                            <input id="estoque_minimo_alt" name="estoque_minimo_alt" type="number" placeholder="Número Mínimo">
+                        </li>
+                        <li>
+                            <label for="estoque_maximo_alt">Estoque Máximo:</label>
+                            <input id="estoque_maximo_alt" name="estoque_maximo_alt" type="number" placeholder="Número Máximo">
+                        </li>
+                        <li>
+                            <label for="qtde_alt">Quantidade:</label>
+                            <input id="qtde_alt" name="qtde_alt" type="number" placeholder="Quantidade atual">
+                        </li>
+                        <li>
+                            <label for="valor_unitario_alt">Valor Unitário:</label>
+                            <input id="valor_unitario_alt" name="valor_unitario_alt" type="number" step="0.01" placeholder="0,00">
+                        </li>
+                        <li>
+                            <label for="data_entrada_alt">Data de Entrada:</label>
+                            <input id="data_entrada_alt" name="data_entrada_alt" type="date">
+                        </li>
+                        <li>
+                            <button type="submit">Alterar</button>
+                        </li>
+                    </ul>
                 </form>
             </fieldset>
         </div>
 
-        <div id="deletar" style="display: none;" >
+        <div id="deletar" style="display: none;" class = "container">
             <h2>Deletar</h2>
         
             <fieldset>
-                <legend>Formulário</legend>
                 <form action="deletar" method="POST" name="formulario4" id="formulario4">
-                    <label for="produto_del">Produto:</label>
-                    <input id="produto_del" name="produto_del" type="text"><br><br>
-                    <button type="submit">Deletar</button>
-    
+                    <ul class="flex-outer">
+                        <li>
+                            <label for="produto_del">Produto:</label>
+                            <input id="produto_del" name="produto_del" type="text" placeholder="Nome do produto">
+                        </li>
+                        <li>
+                            <button type="submit">Deletar</button>
+                        </li>
+                    </ul>
                 </form>
             </fieldset>
         </div>
