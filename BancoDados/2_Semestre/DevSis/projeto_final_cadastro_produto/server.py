@@ -1,12 +1,13 @@
 import flask
 import mysql.connector
 
-# Para instalar o flask digite no terminal do seu Sistema Operacional: pip install flask
 
-app = flask.Flask(__name__, template_folder='templates', # Todos os arquivos HTML
-                            static_folder='static',      # Todos os arquivos JS e CSS
-                            static_url_path='')          # URL para acessar a pasta static, '' significa acessar pelo domínio direto
 
+app = flask.Flask(__name__, template_folder='templates', 
+                            static_folder='static',      
+                            static_url_path='')          
+
+# Conexão com o banco
 banco_de_dados = mysql.connector.connect(
     host="bd-grupo-08.mysql.uhserver.com",
     user="impacta_grupo08",
@@ -18,7 +19,9 @@ cursor = banco_de_dados.cursor()
 @app.route('/',methods=['GET'])
 def home(): 
     return flask.render_template('home.html')
+########################################################
 
+######## Cadastro do Produto ########
 @app.route('/cadastrar',methods=['POST'])
 def salvar_dados():
     info = flask.request.form.to_dict()
@@ -44,7 +47,9 @@ def salvar_dados():
         banco_de_dados.commit()
 
     return flask.render_template('home.html',status=f"Produto: {descricao} cadastrado com sucesso!")
+################################################################
 
+######## Consulta pelo nome do produto ########
 @app.route('/consultar_produto',methods=['POST'])
 def consultar_produto():
     
@@ -74,7 +79,9 @@ def consultar_produto():
         resultado_final.append(list(zip(campos,i)))
 
     return flask.render_template('home.html',resultado=resultado_final)
+##################################################################
 
+######## Consulta pelo ID ########
 @app.route('/consultar_idProduto',methods=['POST'])
 def consultar_idProduto():
     
@@ -98,7 +105,9 @@ def consultar_idProduto():
         resultado_final.append(list(zip(campos,i)))
 
     return flask.render_template('home.html',resultado=resultado_final)
+#################################################################
 
+######## Alteração dos dados ########
 @app.route('/alterar_dados',methods=['POST'])
 def alterar_dados():
     info = flask.request.form.to_dict()
@@ -136,20 +145,12 @@ def alterar_dados():
         sql_update = sql_update[:-1]        
         sql_update = sql_update + f' WHERE descricao = "{descricao}"'
 
-        # Altera tudo
-        # sql_update = f"""
-        #         UPDATE tbl_Produto SET descricao = "{descricao}", estoque_minimo = "{estoque_minimo}", 
-        #         estoque_maximo = "{estoque_maximo}",  qtde = "{qtde}", 
-        #         valor_unitario = {valor_unitario} WHERE descricao = "{descricao}"
-        # """ 
-
         cursor.execute(sql_update)
         banco_de_dados.commit()
         return flask.render_template('home.html',status=f"Produto: {descricao} alterado com sucesso")
+######################################################################
 
-
-
-
+######## Deletar produto #########
 @app.route('/deletar',methods=['POST'])
 def deletar_dados():
     info = flask.request.form.to_dict()
@@ -175,6 +176,7 @@ def deletar_dados():
         cursor.execute(sql_delete)
         banco_de_dados.commit()
         return flask.render_template('home.html',status=f"Produto: {descricao} deletado sucesso")
+######################################################################
 
 if __name__ == "__main__":
     # localhost = 127.0.0.1
@@ -182,7 +184,7 @@ if __name__ == "__main__":
     # Porta 443: HTTPS
 
     # Acesso somente pelo seu PC
-    app.run(host="localhost",port=9999)
+    app.run(host="localhost",port=80)
 
     # Acesso somente pela sua INTRAnet
     # app.run(host="localhost",port=9999)
