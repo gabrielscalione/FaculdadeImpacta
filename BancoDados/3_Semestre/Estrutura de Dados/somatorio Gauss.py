@@ -1,0 +1,6 @@
+a = int(input('Informe a: '))
+b = int(input('Informe b: '))
+n = (b-a+1) # quantidade de n ́umeros na sequ^encia (2 opera ̧c~oes aritm ́eticas)
+soma = (a+b) * n # (2 opera ̧c~oes aritm ́eticas)
+soma = soma // 2 # (1 opera ̧c~ao aritm ́etica)
+print(soma)
