@@ -7,6 +7,12 @@ def devolve_lista_numeros(x, y):
             z = z + 1
     return lista
 
+#Usando o for
+def devolve_lista_numeros_2(x, y):
+    lista = []
+    for i in range(x , y + 1):                
+            lista.append(i)
+    return lista
 
 
 # PROGRAMA PRINCIPAL: nao altere o codigo a partir deste ponto
