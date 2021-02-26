@@ -1,0 +1,67 @@
+<suppliers>
+	<supplier>
+		<supId>1</supId>
+		<SupplierName>A Datum Corporation</SupplierName>
+		<SupCategory>2</SupCategory>
+	</supplier>
+	<supplier>
+		<supId>2</supId>
+		<SupplierName>Contoso, Ltd.</SupplierName>
+		<SupCategory>2</SupCategory>
+	</supplier>
+	<supplier>
+		<supId>3</supId>
+		<SupplierName>Consolidated Messenger</SupplierName>
+		<SupCategory>6</SupCategory>
+	</supplier>
+	<supplier>
+		<supId>4</supId>
+		<SupplierName>Fabrikam, Inc.</SupplierName>
+		<SupCategory>4</SupCategory>
+	</supplier>
+	<supplier>
+		<supId>5</supId>
+		<SupplierName>Graphic Design Institute</SupplierName>
+		<SupCategory>2</SupCategory>
+	</supplier>
+	<supplier>
+		<supId>6</supId>
+		<SupplierName>Humongous Insurance</SupplierName>
+		<SupCategory>9</SupCategory>
+	</supplier>
+	<supplier>
+		<supId>7</supId>
+		<SupplierName>Litware, Inc.</SupplierName>
+		<SupCategory>5</SupCategory>
+	</supplier>
+	<supplier>
+		<supId>8</supId>
+		<SupplierName>Lucerne Publishing</SupplierName>
+		<SupCategory>2</SupCategory>
+	</supplier>
+	<supplier>
+		<supId>9</supId>
+		<SupplierName>Nod Publishers</SupplierName>
+		<SupCategory>2</SupCategory>
+	</supplier>
+	<supplier>
+		<supId>10</supId>
+		<SupplierName>Northwind Electric Cars</SupplierName>
+		<SupCategory>3</SupCategory>
+	</supplier>
+	<supplier>
+		<supId>11</supId>
+		<SupplierName>Trey Research</SupplierName>
+		<SupCategory>8</SupCategory>
+	</supplier>
+	<supplier>
+		<supId>12</supId>
+		<SupplierName>The Phone Company</SupplierName>
+		<SupCategory>2</SupCategory>
+	</supplier>
+	<supplier>
+		<supId>13</supId>
+		<SupplierName>Woodgrove Bank</SupplierName>
+		<SupCategory>7</SupCategory>
+	</supplier>
+</suppliers>
