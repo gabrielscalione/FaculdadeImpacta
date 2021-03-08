@@ -1,0 +1,14 @@
+﻿{
+"description": "SupplierCategories",
+"data": [
+			{"supCatId": 1, "SupCatName": "Other Wholesaler", "LastEditedBy": 1},
+			{"supCatId": 2, "SupCatName": "Novelty Goods Supplier",	"LastEditedBy": 1},
+			{"supCatId": 3, "SupCatName": "Toy Supplier", "LastEditedBy": 1},
+			{"supCatId": 4, "SupCatName": "Clothing Supplier", "LastEditedBy": 1},
+			{"supCatId": 5, "SupCatName": "Packaging Supplier", "LastEditedBy": 1},
+			{"supCatId": 6, "SupCatName": "Courier Services Supplier", "LastEditedBy": 16},
+			{"supCatId": 7, "SupCatName": "Financial Services Supplier", "LastEditedBy": 1},
+			{"supCatId": 8, "SupCatName": "Marketing Services Supplier", "LastEditedBy": 1},
+			{"supCatId": 9, "SupCatName": "Insurance Services Supplier", "LastEditedBy": 1},
+		]
+}
