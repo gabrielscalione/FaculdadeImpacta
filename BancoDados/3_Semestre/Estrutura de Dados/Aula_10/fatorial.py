@@ -1,9 +1,8 @@
-def fatorial(n):
-    fat = 1
-    while n >= 1:
-        fat *= n
-        n -= 1
-    return fat
+def fat(n):
+    if n == 0:
+        return 1
+    else:
+        return n * fat(n-1)
 
 # Programa principal:
-print(fatorial(5))
+print(fat(5))
