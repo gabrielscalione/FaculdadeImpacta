@@ -4,13 +4,6 @@ CREATE OR ALTER PROCEDURE sp_calculaDatasVencimento
   , @numeroParcelas SMALLINT   
  ) 
  AS BEGIN
-
-	IF @numeroParcelas > 12 
-	begin	
-		print('### Não pode '
-		break;
-	end
-
 	-- Pega a data de hoje
 	DECLARE @dataUtilVencimento DATETIME 
 		  , @primeiroDiaDoMes DATETIME
