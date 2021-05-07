@@ -36,7 +36,7 @@ CREATE OR ALTER PROCEDURE sp_vencimentoemDiasUteis_v2
  )  
 AS BEGIN  
 	DECLARE @contadorDiasUteis SMALLINT = 1  
-	SET @DataVencimento = GETDATE()  
+	SET @DataVencimento = @DataInicial
   
 	WHILE ( @contadorDiasUteis <= @VencimentoEmDiasUteis )  
 	BEGIN  
@@ -53,6 +53,8 @@ END   -- fim da procedure
 
 GO
 
-DECLARE @DataInicial DATE = GETDATE(), @DiasVencimento SMALLINT= 7, @DataVencimento DATE
+DECLARE @DataInicial DATE = GETDATE(), 
+        @DiasVencimento SMALLINT= 7, 
+	    @DataVencimento DATE
 EXEC sp_vencimentoemDiasUteis_v2 @DataInicial, @DiasVencimento, @DataVencimento OUTPUT
 SELECT @DataVencimento as DataVencimento
