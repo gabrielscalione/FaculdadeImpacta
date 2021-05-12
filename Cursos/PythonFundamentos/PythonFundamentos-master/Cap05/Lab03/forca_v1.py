@@ -122,14 +122,13 @@ class Hangman:
 def rand_word():
         with open("palavras.txt", "rt") as f:
                 bank = f.readlines()
-        return bank[random.randint(0,len(bank))].strip()
+        return bank[random.randint(0,len(bank))].strip().lower()
 
 # Método Main - Execução do Programa
 def main():
 
 	# Objeto
 	game = Hangman(rand_word())
-
 	# Enquanto o jogo não tiver terminado, print do status, solicita uma letra e faz a leitura do caracter
 	while not game.hangman_over():
 		game.print_game_status()
@@ -144,7 +143,7 @@ def main():
 		print ('\nParabéns! Você venceu!!')
 	else:
 		print ('\nGame over! Você perdeu.')
-		print ('A palavra era ' + game.word)
+		print ('A palavra era ' + game.palavra)
 		
 	print ('\nFoi bom jogar com você! Agora vá estudar!\n')
 
