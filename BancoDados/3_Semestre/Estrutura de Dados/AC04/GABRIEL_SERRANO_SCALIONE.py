@@ -59,11 +59,20 @@ class ListaSimplificada:
 		self.tamanho += 1
 
 	def adicionar_na_frente(self, item):
-		pass # apague a instrução pass e implemente o método adicionar_na_frente
+		novo_no = self.No(item, None)
+		novo_no.prox = self.cabeca
+		self.cabeca = novo_no
+		self.tamanho += 1
 
 	def count(self, alvo):
-		pass # apague a instrução pass e implemente o método count
-
+		no_atual = self.cabeca
+		conta_alvo = 0
+		while no_atual != None:
+			if no_atual.dado == alvo:
+				conta_alvo += 1
+			no_atual = no_atual.prox
+		
+		return conta_alvo
 
 
 
