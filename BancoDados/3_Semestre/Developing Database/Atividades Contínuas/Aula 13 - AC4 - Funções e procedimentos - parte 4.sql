@@ -176,6 +176,18 @@ GO
 --=X=-- AC4 
 --=X=-- --=X=-- --=X=-- --=X=-- --=X=-- --=X=-- --=X=-- --=X=-- --=X=-- 
 /*
+1 - 
+Criem uma procedure que receba como parâmetros:
+	 localidade('Faculdade Impacta - Paulista')
+	 cliente('Almir dos Santos') --Podem cadastrar outros clientes para testes
+	 categoria ( 'Mensalista Professor' )
+	 dia útil ( ex: 5º )
+	 duração do contrato em meses ( de 1 a 12 )
+ Que faça um insert na tabela contrato
+ E que faça um insert na tabela mensalidade
+ 
+
+
 1 - Postem o código solicitado como atividade para casa na aula 12 na questão 10.
 Criem uma procedure que receba como parâmetros:
  uma localidade('Faculdade Impacta - Paulista')
@@ -296,6 +308,16 @@ contrato e mensalidade ( com ênfase nos dados recém inseridos).
 
 ----------------------------------------------------------------------
 /*
+3 - 
+Criar uma procedure com os parametros
+ 	nome do cliente ( ‘Amauri Silva e Silva’ )
+	CPF ( ‘123.456.789.-09’ )
+ 	telefone ( ‘912345678’)
+	bit  (0 = não é professor ou 1 = é professor)
+que faça um insert na tabela cliente. 
+Dentro da procedure, coloque uma condição para verificar se o cliente já existe. Se ele existir exiba o id.
+Se o cliente não existir, faça o insert e exiba o novo id desse novo cliente.
+
 3 - Postem o código solicitado para o seguinte enunciado:
 Criem uma procedure que receba como parâmetros de entrada:
  	o nome do cliente ( ‘Amauri Silva e Silva’ )
@@ -363,6 +385,9 @@ com CPF novos e velhos, além do select da tabela cliente
 ------------------------------------------------------------------------
 /*
 5 - Postem o código solicitado para o seguinte enunciado:
+
+
+Criar uma outra versão da procedure do exercicio 3, porém ascrecentando a procedure que valida para validar o CPF.
 
 Alterem a procedure criada no item 4 para incluir uma validação no CPF 
 recebido como parâmetro.
