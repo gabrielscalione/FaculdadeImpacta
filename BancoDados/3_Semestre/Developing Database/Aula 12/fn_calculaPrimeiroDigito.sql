@@ -1,0 +1,16 @@
+CREATE OR ALTER FUNCTION fn_calculaPrimeiroDigito ( @CPF CHAR(11) )  
+RETURNS INT AS  
+BEGIN  
+ DECLARE @retorno INT  
+ SELECT @retorno =   
+    CONVERT(INT,SUBSTRING(@CPF,1,1)) * 10   
+  + CONVERT(INT,SUBSTRING(@CPF,2,1)) * 9   
+  + CONVERT(INT,SUBSTRING(@CPF,3,1)) * 8   
+  + CONVERT(INT,SUBSTRING(@CPF,4,1)) * 7   
+  + CONVERT(INT,SUBSTRING(@CPF,5,1)) * 6   
+  + CONVERT(INT,SUBSTRING(@CPF,6,1)) * 5   
+  + CONVERT(INT,SUBSTRING(@CPF,7,1)) * 4   
+  + CONVERT(INT,SUBSTRING(@CPF,8,1)) * 3   
+  + CONVERT(INT,SUBSTRING(@CPF,9,1)) * 2  
+ return (@retorno * 10) % 11 % 10  
+END
