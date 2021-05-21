@@ -1,5 +1,8 @@
 USE ImpactaEstacionamento
 GO 
+-- CONSULTA TABELA DO CLIENTE
+SELECT * FROM cliente3
+GO
 
 	CREATE OR ALTER PROCEDURE sp_cadastraCliente_v2
 	( @nomeCliente VARCHAR(50)		= NULL
@@ -39,6 +42,7 @@ GO
 				VALUES (@nomeCliente, @cpf, @telefone, @ehProfessor)
 
 				-- E EXIBE MENSAGEM COM O NOVO ID DO CLIENTE
+				select 1 as mensagem
 				select 'Cadastrado do cliente realizado, id: ' + cast(id as char) as mensagem from cliente3 WHERE cpf = @cpf
 
 			END -- FIM DO IF VERIFICARCLIENTE
@@ -50,4 +54,7 @@ GO
 
 	EXEc sp_cadastraCliente_v2 'Luzia Emily da Silva','197.860-42','(86) 3953-8373',1
 	EXEc sp_cadastraCliente_v2 'Levi Jorge Ian dos Santos','asd.763.580-13','(83) 99193-5152',1
-	EXEc sp_cadastraCliente_v2 'Marlene Sueli Rocha','167.075.828-99','(27) 99909-0357',0
+	EXEc sp_cadastraCliente_v2 'Olivia Melissa Gonçalves','950.799.884-52','(27) 99909-0357',0
+
+
+	

@@ -274,7 +274,7 @@ Ex:		15/06/2021		R$100,00 --10º dia útil ( hipotético )
 				VALUES (@idPlano, @idCliente, @diaVencimento, @dataContratacao, @dataEncerramento)
 		
 			--- pegar o id do contrato
-			select @idContrato = max(id) from contrato group by id
+			select @idContrato = @@IDENTITY
 		
 			CREATE TABLE #DatasVencimento ( dia DATE)
 			INSERT INTO #DatasVencimento
@@ -431,6 +431,7 @@ SELECT 'O CPF : '+ @CPF + ' é ' + @retorno
 				insert into cliente3 (nome, cpf, telefone, professor)
 				VALUES (@nomeCliente, @cpf, @telefone, @ehProfessor)
 
+				select 1 as mensagem
 				select 'Cadastrado do cliente realizado, id: ' + cast(id as char) as mensagem from cliente3 WHERE cpf = @cpf
 
 			END
@@ -439,7 +440,7 @@ SELECT 'O CPF : '+ @CPF + ' é ' + @retorno
 
 	EXEc sp_cadastraCliente_v2 'Luzia Emily da Silva','197.860-42','(86) 3953-8373',1
 	EXEc sp_cadastraCliente_v2 'Levi Jorge Ian dos Santos','asd.763.580-13','(83) 99193-5152',1
-	EXEc sp_cadastraCliente_v2 'Marlene Sueli Rocha','167.075.828-99','(27) 99909-0357',0
+	EXEc sp_cadastraCliente_v2 'Benedita Sophie Alice das Neves','917.442.597-80','(27) 99909-0357',0
 
 ------------------------------------------------------------------------
 /*

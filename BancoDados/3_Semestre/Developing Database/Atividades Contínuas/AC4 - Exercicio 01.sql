@@ -9,6 +9,7 @@
 	, @diaUtil int				= NULL
 	, @duracaoContrato int		= NULL
 	)AS BEGIN
+		--DECLARA AS VARIAVEIS QUE SERAO UTILIZADAS
 		declare @idCategoria int
 		, @idPlano int
 		, @idLocalidade int
@@ -48,11 +49,11 @@
 			VALUES (@idPlano, @idCliente, @diaVencimento, @dataContratacao, @dataEncerramento)
 		
 		-- IDENTIFICA QUAL É O ID DO CONTRATO NOVO
-		select @idContrato = max(id) from contrato group by id
+		select @idContrato = @@IDENTITY
 		
 
 		-- CALCULA OS PRÓXIMOS VENCIMENTOS E INSERE EM UMA TABELA TEMPORÁRIA
-		CREATE TABLE #DatasVencimento ( dia DATE)
+		CREATE TABLE #DatasVencimento (dia DATE)
 		INSERT INTO #DatasVencimento
 		EXEC sp_calculaDatasVencimento @diaUtil, @duracaoContrato
 		
