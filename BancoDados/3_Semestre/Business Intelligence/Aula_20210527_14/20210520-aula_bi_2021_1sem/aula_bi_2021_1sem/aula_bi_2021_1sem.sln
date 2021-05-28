@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31205.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "aula_bi_2021_1sem", "aula_bi_2021_1sem.dtproj", "{03512265-EE61-4BC9-A845-3D623616FDCB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{03512265-EE61-4BC9-A845-3D623616FDCB}.Development|Default.ActiveCfg = Development
+		{03512265-EE61-4BC9-A845-3D623616FDCB}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {63363A0D-D835-4ECE-9769-AE5B67097750}
+	EndGlobalSection
+EndGlobal
