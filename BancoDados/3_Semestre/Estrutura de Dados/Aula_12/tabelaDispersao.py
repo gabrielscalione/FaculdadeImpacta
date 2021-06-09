@@ -43,3 +43,9 @@ class TabelaDispersao:
                 if item == self.tabela[posicao][i]:
                     return True
             return False
+
+# Programa principal
+tabela = TabelaDispersao(37)
+tabela.adicionar("objeto")
+
+print("Existe 'objeto'?", tabela.buscar("objeto"))

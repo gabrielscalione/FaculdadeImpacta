@@ -28,10 +28,10 @@ def ordenacao_bolha(lista):
         houveTroca = False # marca a flag como falsa, pois se n~ao houve troca a lista estar ́a ordenada
         for j in range(1, len(lista)-i):
             if lista[j-1] > lista[j]:
-            temp = lista[j-1]
-            lista[j-1] = lista[j]
-            lista[j] = temp
-            houveTroca = True # se houve troca, a flag  ́e marcada como verdadeira e o while ser ́a executado mais uma vez
+                temp = lista[j-1]
+                lista[j-1] = lista[j]
+                lista[j] = temp
+                houveTroca = True # se houve troca, a flag  ́e marcada como verdadeira e o while ser ́a executado mais uma vez
     i += 1
 
 
