@@ -1,0 +1,13 @@
+IP Elastico: 52.204.140.54
+
+DNS IPv4 público: ec2-52-204-140-54.compute-1.amazonaws.com
+
+Senha de acesso: (3A.S8Kg3urfmBu(QGG?%NS7ZDb=GnOI
+
+User1: gabriel
+Senha: Impacta@1903812
+
+Users: principal
+	   secundario
+	   SQL
+Senha: Impacta@1903812
