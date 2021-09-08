@@ -1,6 +1,26 @@
+Instancia: Principal
+
 IP Elastico: 52.204.140.54
 
 DNS IPv4 público: ec2-52-204-140-54.compute-1.amazonaws.com
+
+Senha admin: 
+(3A.S8Kg3urfmBu(QGG?%NS7ZDb=GnOI
+
+User1: gabriel
+Senha: Impacta@1903812
+
+Users: principal
+	   secundario
+	   SQL
+Senha: Impacta@1903812
+
+--------------------------------------------
+Instancia: Secundario
+
+IP Elastico: 3.224.236.132
+
+DNS: IPV4 público: ec2-3-224-236-132.compute-1.amazonaws.com
 
 Senha admin: 
 (3A.S8Kg3urfmBu(QGG?%NS7ZDb=GnOI
