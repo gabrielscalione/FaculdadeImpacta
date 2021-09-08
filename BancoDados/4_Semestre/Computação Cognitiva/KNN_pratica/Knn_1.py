@@ -10,7 +10,7 @@ import numpy as np
 import pandas as pd
 
 ## Carregando os dados
-dataset = pd.read_csv('Case_cobranca.csv') 
+dataset = pd.read_csv('c:/Users/gabriel.scalione/Documents/GitHub/FaculdadeImpacta/BancoDados/4_Semestre/Computação Cognitiva/KNN_pratica/Case_cobranca.csv') 
 
 #------------------------------------------------------------------------------------------
 # Pré-processamento das variáveis
@@ -35,7 +35,7 @@ dataset['PRE_SEXO_M']       = [1 if x=='M'                         else 0 for x 
 y = dataset['ALVO']              # Carrega alvo ou dataset.iloc[:,7].values
 X = dataset.iloc[:, 8:15].values # Carrega colunas 8, 9, 10, 11, 12, 13 e 14 (a 15 não existe até este momento)
 from sklearn.model_selection import train_test_split
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.25, random_state = 25)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.25, random_state = 812)
 
 #---------------------------------------------------------------------------
 ## Ajustando - Aprendizado supervisionado  
