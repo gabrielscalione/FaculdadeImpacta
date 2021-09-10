@@ -49,7 +49,7 @@ LogisticReg.fit(X_train, y_train)
 ## Calculando a KNN - Aprendizado supervisionado  
 #---------------------------------------------------------------------------
 from sklearn.neighbors import KNeighborsClassifier
-Classifier_kNN = KNeighborsClassifier(n_neighbors=30, weights='uniform', algorithm='brute', p=2)
+Classifier_kNN = KNeighborsClassifier(n_neighbors=1, weights='uniform', algorithm='brute', p=2)
 Classifier_kNN.fit(X_train, y_train)
 
 # Árvore de decisão com dados de treinamento
