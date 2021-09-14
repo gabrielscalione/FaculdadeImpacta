@@ -1,5 +1,5 @@
 /* 
-			AC2 - 
+			AC2 - Segurança de Dados - Criptografia
 */
 USE Cripto
 GO
