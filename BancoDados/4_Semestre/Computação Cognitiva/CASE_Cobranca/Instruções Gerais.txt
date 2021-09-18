@@ -1,0 +1,12 @@
+Instruções Gerais
+---------------------------------------
+
+- Utilize os arquivos compartilhados;
+- Troque o random_state na linha 48 pelos últimos 3 números do seu RA;
+- Com o professor rode parte a parte do código Python;
+- Experimente alterar parâmetros da RNA, principalmente a camada intermediária.
+- Entregável: apresentação em Powerpoint ou similar (instruções no arquivo DOC);
+- No pré-processamento faça as seguintes transformações:
+     - Colocar o alvo como sendo mais de 120 dias como mau;
+     - Codificação dummy para Idade;
+     - Codificação dummy para quantidade de dívida.
