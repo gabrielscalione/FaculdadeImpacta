@@ -19,7 +19,7 @@ um algoritmo de 2 vias assimétrico de criptografia.
 	--=X=-- CRIA CHAVE ASSIMÉTRICA
 	CREATE ASYMMETRIC KEY ChaveAssimetrica001
 	WITH ALGORITHM = RSA_2048
-	ENCRYPTION BY PASSWORD = N'!@@QW#E#$R%dreud76';
+	ENCRYPTION BY PASSWORD = N'mGd]Ap#]ei4{bff';
 	GO
 	
 	--=X=-- CRIA A FUNÇÃO DE CRIPTOGRAFIA
@@ -38,7 +38,7 @@ um algoritmo de 2 vias assimétrico de criptografia.
 	GO
 
 	--=X=-- TESTE
-	SELECT dbo.Fn_encrypt('Bazzinga')
+	SELECT dbo.Fn_encrypt('senhaforte')
 	GO
 
 /************************************************************************************************
@@ -55,14 +55,14 @@ convertido em VARCHAR
 	begin
 		Declare @key_ID INT = (select AsymKey_ID('ChaveAssimetrica001'))
 	
-		return CONVERT(VARCHAR,DecryptByAsymKey(@key_ID, @result, N'!@@QW#E#$R%dreud76'))
+		return CONVERT(VARCHAR,DecryptByAsymKey(@key_ID, @result, N'mGd]Ap#]ei4{bff'))
 
 		return @result
 	end
 	GO
 
 	--=X=-- TESTE
-	SELECT dbo.Fn_decrypt(dbo.Fn_encrypt('Bazzinga'))
+	SELECT dbo.Fn_decrypt(dbo.Fn_encrypt('senhaforte')) AS SENHA_DECRIPT
 	GO
 
 /************************************************************************************************
@@ -73,12 +73,12 @@ um algoritmo de HASH com a utilização de um SALT ( por segurança ).
 *************************************************************************************************/
 
 	--=X=-- CRIA A FUNÇÃO DE HASH
-	create or alter function dbo.Fn_hash (@pass VARCHAR(255))
+	CREATE OR ALTER FUNCTION dbo.Fn_hash (@pass VARCHAR(255))
 	RETURNS VARBINARY(max)
 	AS
 	begin
 
-		Declare @Salt Varchar(50) = 'Saitama'
+		Declare @Salt Varchar(50) = 'kamehamehaaaa'
 		Declare @value Varchar(255) =  @pass + @salt
 
 		Declare @result VARBINARY(MAX)
@@ -90,7 +90,7 @@ um algoritmo de HASH com a utilização de um SALT ( por segurança ).
 	GO
 
 	--=X=-- TESTE
-	SELECT dbo.Fn_hash('oi')
+	SELECT dbo.Fn_hash('testepass') AS SENHA_HASH
 	GO
 
 /********************************************************************************/
@@ -107,13 +107,13 @@ GO
 
 	--Inserindo valores nas tabelas para testes:
 	INSERT INTO TBL_CTRL_ACESSO ( LOGIN, SENHA, DICA_SENHA )
-	VALUES ( 'José', dbo.FN_HASH('senha'), dbo.FN_ENCRYPT('aquela lá') )
-	GO
-	INSERT INTO TBL_CTRL_ACESSO ( LOGIN, SENHA, DICA_SENHA )
-	VALUES ( 'Jaiminho', dbo.FN_HASH('tangamandapio'), dbo.FN_ENCRYPT('evitar a fadiga na terrinha') )
-	GO
-	INSERT INTO TBL_CTRL_ACESSO ( LOGIN, SENHA, DICA_SENHA )
-	VALUES ( 'Chapolin', dbo.FN_HASH('marreta'), dbo.FN_ENCRYPT('a bionica') )
+	VALUES	
+			( 'igor.schmidt', dbo.FN_HASH('17544'), dbo.FN_ENCRYPT('Pediatra'))
+	, 		( 'camila.pereira', dbo.FN_HASH('88666'), dbo.FN_ENCRYPT('Obstetra'))
+	, 		( 'adamastor.pedreira', dbo.FN_HASH('64564'), dbo.FN_ENCRYPT('Cardiologista'))
+	, 		( 'mauricio.santos', dbo.FN_HASH('23577'), dbo.FN_ENCRYPT('Obstetra'))
+	, 		( 'dorival.silva', dbo.FN_HASH('98567'),  dbo.FN_ENCRYPT('Obstetra'))
+	, 		( 'patricia.santos', dbo.FN_HASH('65867'), dbo.FN_ENCRYPT('Pediatra'))
 	GO
 
 	--Testando valores brutos inseridos na tabela
@@ -123,7 +123,7 @@ GO
 	--Testando valores decriptografados lidos da tabela
 	SELECT login, senha,
 	CONVERT(VARCHAR, dbo.Fn_decrypt(dica_senha)) AS dica_senha
-	FROM tbl_ctrl_acesso
+	FROM TBL_CTRL_ACESSO
 	GO
 
 
@@ -141,32 +141,48 @@ se aquele usuário foi cadastrado com aquela senha, e 0 caso contrário.
 
 	--- CRIAÇÃO DA PROC LOGIN
 	create or alter procedure Pr_login 
-	(	@login VARCHAR(100) = NULL
-		, @senha VARCHAR(255) = NULL
+	(	@login VARCHAR(100)		= NULL
+		, @senha VARCHAR(255)	= NULL
 		, @result BIT output
 	)
 	as begin
 		
-		SET @result = IIF( EXISTS(SELECT * FROM tbl_ctrl_acesso WHERE login = @login and senha = dbo.Fn_hash(@senha)), 1, 0)
+		SET @result = IIF(EXISTS(SELECT * FROM tbl_ctrl_acesso WHERE login = @login and senha = dbo.Fn_hash(@senha)), 1, 0)
 
 	end
 	go
 
 	--testando procedure de login
 	DECLARE @result BIT
+	, @login VARCHAR(100) = NULL
+	, @senha VARCHAR(255) = NULL
+
 	
-	--AUTENTICADO
-	EXEC Pr_login 'josé', 'senha', @result output
+	-- TESTE COM AUTENTICADOS
+	-- 1 --
+	SET @login = 'igor.schmidt'
+	SET @senha = '17544'
+	EXEC Pr_login @login, @senha, @result output
 	SELECT CASE WHEN @result = 1 THEN 'Autenticado' ELSE 'Não autenticado' END
 	
-	EXEC Pr_login 'Chapolin', 'marreta', @result output
+	-- 2 --
+	SET @login = 'camila.pereira'
+	SET @senha = '88666'
+	EXEC Pr_login @login, @senha, @result output
 	SELECT CASE WHEN @result = 1 THEN 'Autenticado' ELSE 'Não autenticado' END
 
-	--NÃO AUTENTICADO
-	EXEC Pr_login 'Jaiminho', 'carteiro', @result output
+	------------------------------------------------------------------------------------------------------------------------------
+	--TESTES COM NÃO AUTENTICADOS
+	-- 1 --  LOGIN ERRADO COM A SENHA CERTA
+	SET @login = 'adamastor'
+	SET @senha = '64564'
+	EXEC Pr_login @login, @senha, @result output
 	SELECT CASE WHEN @result = 1 THEN 'Autenticado' ELSE 'Não autenticado' END
 
-	EXEC Pr_login 'josé', 'senha errada', @result output
+	-- 2 -- LOGIN CERTO COM A SENHA ERRADA
+	SET @login = 'patricia.santos'
+	SET @senha = '88666'
+	EXEC Pr_login @login, @senha, @result output
 	SELECT CASE WHEN @result = 1 THEN 'Autenticado' ELSE 'Não autenticado' END
 go
 
@@ -183,7 +199,7 @@ para aquele login.
 	--- CRIAÇÃO DA PROC	ESQUECI SENHA
 	create or alter procedure Pr_esqueci_senha 
 	(	@login VARCHAR(100) = NULL
-		, @result varchar(500) output
+		, @retornadica varchar(500) output
 	)
 	AS BEGIN
 		
@@ -191,7 +207,7 @@ para aquele login.
 
 		SELECT @dica_senha = dica_senha from TBL_CTRL_ACESSO where login = @login
 
-		SET @result = CONVERT(VARCHAR, dbo.Fn_decrypt(@dica_senha))
+		SET @retornadica = CONVERT(VARCHAR, dbo.Fn_decrypt(@dica_senha))
 
 	END
 	go
@@ -199,15 +215,16 @@ para aquele login.
 
 --Exemplo de utilização:
 --Testando a procedure esqueci senha
-	DECLARE @result VARCHAR(60)
-	
-	EXEC Pr_esqueci_senha 'josé', @result output
-	SELECT 'Sua dica da senha é: "' + @result + '"'
+	DECLARE @dicadesenha VARCHAR(500)
 
-	EXEC Pr_esqueci_senha 'chapolin', @result output
-	SELECT 'Sua dica da senha é: "' + @result + '"'
+
+	EXEC Pr_esqueci_senha 'patricia.santos', @dicadesenha output
+	SELECT 'Sua dica da senha é: "' + @dicadesenha + '"'
+
+	EXEC Pr_esqueci_senha 'adamastor.pedreira', @dicadesenha output
+	SELECT 'Sua dica da senha é: "' + @dicadesenha + '"'
 	
-	EXEC Pr_esqueci_senha 'jaiminho', @result output
-	SELECT 'Sua dica da senha é: "' + @result + '"'
+	EXEC Pr_esqueci_senha 'dorival.silva', @dicadesenha output
+	SELECT 'Sua dica da senha é: "' + @dicadesenha + '"'
 
 go
