@@ -14,7 +14,6 @@ import pandas as pd
 dataset = pd.read_csv('Case_cobranca.csv') 
 
 # Ponto de Parada 1  -  Olhar variável dataset no explorador de variáveis
-''' Recorte esta linha e cole nos pontos de paradas
 
 #------------------------------------------------------------------------------------------
 # Pré-processamento das variáveis
@@ -22,7 +21,9 @@ dataset = pd.read_csv('Case_cobranca.csv')
 ## Tratamento de nulos no alvo --- Tempo de Atraso - transformação para alvo binário (>90 dias) 
 dataset['ALVO']   = [0 if np.isnan(x) or x > 90 else 1 for x in dataset['TEMP_RECUPERACAO']]
 
+
 # Ponto de Parada 2  -  Olhar nova coluna 'ALVO' criada na variável dataset
+''' Recorte esta linha e cole nos pontos de paradas
 
 
 ## Tratamento de nulos e normalização --- Variáveis de entrada numéricas
@@ -45,7 +46,7 @@ dataset['PRE_SEXO_M']       = [1 if x=='M'                         else 0 for x 
 y = dataset['ALVO']              # Carrega alvo ou dataset.iloc[:,7].values
 X = dataset.iloc[:, 8:15].values # Carrega colunas 8, 9, 10, 11, 12, 13 e 14 (a 15 não existe até este momento)
 from sklearn.model_selection import train_test_split
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.25, random_state = 25)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.25, random_state = 812)
 
 # Ponto de Parada 4  -  Olhar novas variáveis vetorias criadas X, y, X_test ...
 
