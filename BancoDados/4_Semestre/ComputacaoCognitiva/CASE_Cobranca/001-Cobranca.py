@@ -11,7 +11,7 @@ import numpy as np
 import pandas as pd
 
 ## Carregando os dados
-dataset = pd.read_csv('Case_cobranca.csv') 
+dataset = pd.read_csv('C:\Users\gabriel.scalione\Documents\GitHub\FaculdadeImpacta\BancoDados\4_Semestre\ComputacaoCognitiva\CASE_CobrancaCase_cobranca.csv') 
 
 # Ponto de Parada 1  -  Olhar variável dataset no explorador de variáveis
 
