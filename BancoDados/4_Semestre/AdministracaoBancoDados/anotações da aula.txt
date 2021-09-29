@@ -1,0 +1,11 @@
+anotações da aula 
+
+Aula 07 Aula 07 - Alta concorrência em banco de dados
+
+/* muda a sessão para que ganha automaticamente with (nolock)*/
+set transaction isolation level read uncommitted
+
+
+níveis de isoalmento
+read uncommitted --> with(nolock) --> leitura suja
+read committed  (default)
