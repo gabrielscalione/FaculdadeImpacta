@@ -1,0 +1,3 @@
+Coloque mais 2 técnicas preditoras de sua preferência (defina os parâmetros);
+Coloque mais um preditor Bagging com uma técnica e parâmetros de sua escolha;
+(Word) Compare os resultados de todos os 7 preditores utilizados no case. Crie uma tabela com os erros e faça uma análise descritiva dos resultados.

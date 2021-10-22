@@ -1,7 +1,7 @@
 -- Criar um banco de dados (AULA02)
-create database Aula02
+create database DASQLAula02
 
-USE Aula02
+USE DASQLAula02
 -- Criar 3 tabelas dentro do banco de dados
 	-- CARRO     (NOME,TIPO,VALOR)
 	-- LOJA      (NOME,LOCAL,FATURAMENTO)
@@ -62,7 +62,7 @@ ADD ID_VENDEDOR INT IDENTITY
 
 -- DROPANDO COLUNA
 ALTER TABLE CARRO
-DROP COLUMN ID_CARO
+DROP COLUMN ID_CARRO
 
 
 
