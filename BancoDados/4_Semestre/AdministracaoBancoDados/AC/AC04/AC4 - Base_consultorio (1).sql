@@ -1,7 +1,7 @@
---Create database consultorio
---go
---use consultorio
---go
+Create database consultorio
+go
+use consultorio
+go
 
 
 CREATE TABLE Paciente (
