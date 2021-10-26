@@ -1,11 +1,4 @@
-﻿/*
-	AC4 – Planos de Execução / Indexação
-
-	Nome: Gabriel Serrano Scalione
-	RA: 1903812
-
-*/
-
+﻿
 --●	(1) Visão que devolva: Lista com Nome do Paciente, número do telefone, Data e hora da consulta, duração da consulta, nome do Médico e Sala em que foi feito o atendimento. ( consulta idêntica ao exemplo original ).
 
 
