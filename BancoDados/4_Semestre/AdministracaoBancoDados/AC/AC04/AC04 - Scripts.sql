@@ -102,7 +102,9 @@ exec consultasDias 379, @data
 
 -- ●	(5) Procedure que, dado o nome OU CRM do médico, devolva as últimas 10 consultas que ele realizou. Apresente o nome do paciente, data, hora e duração da consulta e número da sala.
 
-CREATE OR ALTER procedure dbo.ultimasDezConsultas @crm int
+CREATE OR ALTER procedure dbo.ultimasDezConsultas 
+@nome varchar(50) = NULL,
+@crm int = NULL
 As
 	SELECT top 10
 		Pa.Nome as Paciente,
@@ -121,12 +123,15 @@ As
 		INNER JOIN Paciente PA
 			ON PA.ID = CO.ID_PACIENTE
 	where
-		me.CRM = @crm
+		me.Nome = isnull(@nome, me.Nome)
+		AND me.CRM = ISNULL(@crm, me.CRM)
+		
 	order by co.DataHora desc
 
 
-exec ultimasDezConsultas 88666
-
+exec ultimasDezConsultas null, 88666
+exec ultimasDezConsultas 'Camila Andrade Pereira', null
+exec ultimasDezConsultas
 
 
 
