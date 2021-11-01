@@ -153,16 +153,7 @@ from FactInternetSales
 SELECT 
 	DP.ProductKey,
 	DP.EnglishProductName,
-	SUM(FI.SalesAmount) TOTAL_VENDA
-FROM 
-	FactInternetSales FI
-	INNER JOIN DimProduct DP
-		ON DP.ProductKey = fi.ProductKey
-GROUP BY DP.ProductKey, DP.EnglishProductName
-
-SELECT 
-	DP.ProductKey,
-	DP.EnglishProductName,
+	SUM(FI.SalesAmount) TOTAL_VENDA,
 	avg(FI.SalesAmount) MEDIA_VENDA
 FROM 
 	FactInternetSales FI

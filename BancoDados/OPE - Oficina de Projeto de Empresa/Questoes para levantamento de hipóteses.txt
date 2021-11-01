@@ -1,0 +1,31 @@
+Qual a Data com maior ocorrência de incidentes?
+
+Qual a aplicação mais afetada?
+
+Qual a empresa que aparece mais vezes?
+
+Quais são as 3 empresas com maior numero de incidências?
+
+Qual o país de origem com maior incidência?
+
+Qual o país de origem com menor incidência
+
+Qual a base de código de aparece mais vezes?
+
+Qual a base de código que aparece menos vezes?
+
+Qual o método de ataque mais utilizado?
+
+Qual o método de ataque menos utilizado?
+
+Qual o método de distribuição mais utilizado?
+
+Qual o método de distribuição menos utilizado?
+
+Qual o potencial de cadeia de suprimentos?
+
+Maior impacto?
+
+Menor Impacto?
+
+Profundidade do Impacto?
