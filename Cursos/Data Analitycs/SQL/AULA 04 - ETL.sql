@@ -92,7 +92,7 @@ SELECT
 FROM 
 	AdventureWorksDW2019.dbo.DimCustomer
 
-CREATE TABLE DimCliente (
+create TABLE DimCliente (
 	  Id_Cliente int identity
 	, ChaveCliente int
 	, ChaveRegiao int
@@ -115,6 +115,10 @@ FROM
 
 select * from DimCliente
 
+--------------------------------------------------------
+-- Exercícios
+--------------------------------------------------------
+
 
 /*
 	Uma query que retorne agrupado pelo nome do produto
@@ -128,7 +132,7 @@ select * from FatoVenda
 
 
 select 
-	NomeProduto,
+	p.NomeProduto,
 	sum(f.ValorVenda) VendaTotal
 from
 	FatoVenda f
@@ -136,9 +140,7 @@ from
 		on p.ChabeProduto = f.ChaveProduto
 group by NomeProduto
 
---------------------------------------------------------
--- Exercícios
---------------------------------------------------------
+
 
 /*
 	Ajustar a Tabela "FatoVenda" adicionando o customerkey como uma coluna adicional
