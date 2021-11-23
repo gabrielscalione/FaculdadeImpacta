@@ -1,0 +1,34 @@
+wget -O mssql-jdbc.jar https://repo1.maven.org/maven2/com/microsoft/sqlserver/mssql-jdbc/8.4.0.jre8/mssql-jdbc-8.4.0.jre8.jar
+
+sudo mv mssql-jdbc.jar /usr/lib/sqoop/lib/
+
+sqoop list-databases --connect "jdbc:sqlserver://200.49.54.234:1433;user=bd_2021_1;password=Fit2019_#"
+
+sqoop list-tables --connect "jdbc:sqlserver://200.49.54.234:1433;user=bd_2021_1;password=Fit2019_#;database=samp_AdventureWorksDW2017"
+sqoop list-tables --connect "jdbc:sqlserver://200.49.54.234:1433;user=bd_2021_1;password=Fit2019_database=AdventureWorksDW2017"
+
+hdfs dfs -ls /user/hive/
+hdfs dfs -ls /user/hive/warehouse
+
+
+sqoop import \
+    -m 1 \
+    --table DimDate \
+    --connect jdbc:sqlserver://172.18.100.7;databaseName=samp_AdventureWorksDW2017 \
+    --driver com.microsoft.sqlserver.jdbc.SQLServerDriver \
+    --username=bd_2021_1 \
+    --password=Fit2019_# \
+    --compression-codec=snappy \
+    --as-parquetfile \
+    --warehouse-dir=/user/hive/warehouse \
+    --hive-import
+	
+
+sqoop import \
+    -m 1 \
+    --table DimDate \
+    --connect "jdbc:sqlserver://200.49.54.234:1433;database=samp_AdventureWorksDW2017;user=bd_2021_1;password=Fit2019_#" \
+    --compression-codec=snappy \
+    --as-parquetfile \
+    --warehouse-dir=/user/hive/warehouse \
+    --hive-import
