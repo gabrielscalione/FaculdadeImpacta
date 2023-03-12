@@ -1,0 +1,83 @@
+UF;Estado;RM;Cidade-sede;Lei;Região
+PR;Paraná;Apucarana;Apucarana;Lei Complementar Estadual 187/2015[53];Sul
+PR;Paraná;Campo Mourão;Campo Mourão;Lei Complementar Estadual 185/2015[54];Sul
+PR;Paraná;Cascavel;Cascavel;Lei Complementar Estadual 186/2015[55];Sul
+PR;Paraná;Curitiba;Curitiba;Lei Complementar Federal 14/1973[6];Sul
+PR;Paraná;Londrina;Londrina;Lei Complementar Estadual 81/1998[56];Sul
+PR;Paraná;Maringá;Maringá;Lei Complementar Estadual 83/1998[57];Sul
+PR;Paraná;Toledo;Toledo;Lei Complementar Estadual 184/2015[58];Sul
+PR;Paraná;Umuarama;Umuarama;Lei Complementar Estadual 149/2012[59];Sul
+SC;Santa Catarina;Alto Vale do Itajaí;Rio do Sul;Lei Complementar Estadual 523/2010[60];Sul
+SC;Santa Catarina;Carbonífera;Criciúma;Lei Complementar Estadual 221/2002[61];Sul
+SC;Santa Catarina;Chapecó;Chapecó;Lei Complementar Estadual 377/2007[62];Sul
+SC;Santa Catarina;Contestado;Joaçaba;Lei Complementar Estadual 571/2012[63];Sul
+SC;Santa Catarina;Extremo Oeste;São Miguel do Oeste;Lei Complementar Estadual 571/2012[63];Sul
+SC;Santa Catarina;Florianópolis;Florianópolis;Lei Complementar Estadual 162/1998[64];Sul
+SC;Santa Catarina;Foz do Rio Itajaí;Itajaí;Lei Complementar Estadual 221/2002[61];Sul
+SC;Santa Catarina;Jaraguá do Sul;Não definida. A maior cidade é Jaraguá do Sul;Lei Complementar Estadual 788/2021[65];Sul
+SC;Santa Catarina;Joinville;Não definida. A maior cidade é Joinville;Lei Complementar Estadual 788/2021[65];Sul
+SC;Santa Catarina;Lages;Lages;Lei Complementar Estadual 495/2010[66];Sul
+SC;Santa Catarina;Norte/Nordeste Catarinense;Joinville;Lei Complementar Estadual 162/1998[64];Sul
+SC;Santa Catarina;Planalto Norte;Não definida. A maior cidade é Canoinhas;Lei Complementar Estadual 788/2021[65];Sul
+SC;Santa Catarina;Tubarão;Tubarão;Lei Complementar Estadual 221/2002[61];Sul
+SC;Santa Catarina;Vale do Itajaí;Blumenau;Lei Complementar Estadual 162/1998[64];Sul
+RS;Rio Grande do Sul;Porto Alegre;Porto Alegre;Lei Complementar Federal 14/1973[6];Sul
+RS;Rio Grande do Sul;Serra Gaúcha;Caxias do Sul;Lei Complementar Estadual 14.293/2013[67];Sul
+AL;Alagoas;Agreste;Arapiraca;Lei Complementar Estadual 27/2009[23];Nordeste
+AL;Alagoas;Caetés;São Miguel dos Campos;Lei Complementar Estadual 35/2012[24];Nordeste
+AL;Alagoas;Maceió;Maceió;Lei Complementar Estadual 18/1998[25];Nordeste
+AL;Alagoas;Médio Sertão;Santana do Ipanema;Lei Complementar Estadual 39/2013[26];Nordeste
+AL;Alagoas;Palmeira dos Índios;Palmeira dos Índios;Lei Complementar Estadual 32/2012[27];Nordeste
+AL;Alagoas;São Francisco;Penedo;Lei Complementar Estadual 33/2012[28];Nordeste
+AL;Alagoas;Sertão;Delmiro Gouveia;Lei Complementar Estadual 36/2012[29];Nordeste
+AL;Alagoas;Vale do Paraíba;Viçosa;Lei Complementar Estadual 30/2011[30];Nordeste
+AL;Alagoas;Zona da Mata;União dos Palmares;Lei Complementar Estadual 31/2011[31];Nordeste
+BA;Bahia;Feira de Santana;Feira de Santana;Lei Complementar Estadual 35/2011[32];Nordeste
+BA;Bahia;Salvador;Salvador;Lei Complementar Federal 14/1973[6];Nordeste
+CE;Ceará;Cariri;Juazeiro do Norte;Lei Complementar Estadual 78/2009[33];Nordeste
+CE;Ceará;Fortaleza;Fortaleza;Lei Complementar Federal 14/1973[6];Nordeste
+CE;Ceará;Sobral;Sobral;Lei Complementar Estadual 168/2016[34];Nordeste
+MA;Maranhão;Grande São Luís;São Luís;Constituição Estadual de 1989[35];Nordeste
+MA;Maranhão;Sudoeste Maranhense;Imperatriz;Lei Complementar Estadual 89/2005[36];Nordeste
+MA;Maranhão;Leste do Estado do Maranhão;Não definida. A maior cidade é Timon;Lei Complementar Estadual 180/2016[37];Nordeste
+PB;Paraíba;Araruna;Araruna;Lei Complementar Estadual 119/2013[38];Nordeste
+PB;Paraíba;Barra de Santa Rosa;Barra de Santa Rosa;Lei Complementar Estadual 110/2012[39];Nordeste
+PB;Paraíba;Cajazeiras;Cajazeiras;Lei Complementar Estadual 107/2012[40];Nordeste
+PB;Paraíba;Campina Grande;Campina Grande;Lei Complementar Estadual 92/2009[41];Nordeste
+PB;Paraíba;Esperança;Esperança;Lei Complementar Estadual 106/2012[42];Nordeste
+PB;Paraíba;Guarabira;Guarabira;Lei Complementar Estadual 101/2011[43];Nordeste
+PB;Paraíba;Itabaiana;Itabaiana;Lei Complementar Estadual 118/2013[44];Nordeste
+PB;Paraíba;João Pessoa;João Pessoa;Lei Complementar Estadual 59/2003[45];Nordeste
+PB;Paraíba;Patos;Patos;Lei Complementar Estadual 103/2011[46];Nordeste
+PB;Paraíba;Sousa;Sousa;Lei Complementar Estadual 117/2013[47];Nordeste
+PB;Paraíba;Vale do Mamanguape;Mamanguape;Lei Complementar Estadual 116/2013[48];Nordeste
+PB;Paraíba;Vale do Piancó;Piancó;Lei Complementar Estadual 109/2012[49];Nordeste
+PE;Pernambuco;Recife;Recife;Lei Complementar Federal 14/1973[6];Nordeste
+RN;Rio Grande do Norte;Natal;Natal;Lei Complementar Estadual 152/1997[50];Nordeste
+PI;Piauí;Parnaíba;Parnaíba;Lei Complementar Estadual 264/2022[51];Nordeste
+SE;Sergipe;Aracaju;Aracaju;Lei Complementar Estadual 25/1995[52];Nordeste
+ES;Espírito Santo;Grande Vitória;Vitória;Lei Complementar Estadual 58/1995[12];Sudeste
+MG;Minas Gerais;Belo Horizonte;Belo Horizonte;Lei Complementar Federal 14/1973[6];Sudeste
+MG;Minas Gerais;Vale do Aço;Não definida. A maior cidade é Ipatinga.;Lei Complementar Estadual 51/1998[13];Sudeste
+RJ;Rio de Janeiro;Rio de Janeiro;Rio de Janeiro;Lei Complementar Federal 20/1974[14];Sudeste
+SP;São Paulo;Baixada Santista;Santos;Lei Complementar Estadual 815/1996[15];Sudeste
+SP;São Paulo;Campinas;Campinas;Lei Complementar Estadual 870/2000[16];Sudeste
+SP;São Paulo;Jundiaí;Jundiaí;Lei Complementar Estadual 1.362/2021[17];Sudeste
+SP;São Paulo;Piracicaba;Piracicaba;Lei Complementar Estadual 1.360/2021[18];Sudeste
+SP;São Paulo;Ribeirão Preto;Ribeirão Preto;Lei Complementar Estadual 1.290/2016[19];Sudeste
+SP;São Paulo;São José do Rio Preto;São José do Rio Preto;Lei Complementar Estadual 1.359/2021[20];Sudeste
+SP;São Paulo;São Paulo;São Paulo;Lei Complementar Federal 14/1973[6];Sudeste
+SP;São Paulo;Sorocaba;Sorocaba;Lei Complementar Estadual 1.241/2014[21];Sudeste
+SP;São Paulo;Vale do Paraíba e Litoral Norte;São José dos Campos;Lei Complementar Estadual 1.166/2012[22];Sudeste
+AP;Amapá;Macapá;Macapá;Lei Complementar Estadual 21/2003[4];Norte
+AM;Amazonas;Manaus;Manaus;Lei Complementar Estadual 52/2007[5];Norte
+PA;Pará;Belém;Belém;Lei Complementar Federal 14/1973[6];Norte
+PA;Pará;Santarém;Santarém;Lei Complementar Estadual 79/2012[7];Norte
+RO;Rondônia;Porto Velho;Porto Velho;Lei Ordinária 3.654/2015[8];Norte
+RR;Roraima;Boa Vista;Boa Vista;Lei Complementar Estadual 130/2007[9];Norte
+RR;Roraima;Central;Caracaraí;Lei Complementar Estadual 130/2007[9];Norte
+RR;Roraima;Sul de Roraima;Caroebe;Lei Complementar Estadual 130/2007[9];Norte
+TO;Tocantins;Palmas;Palmas;Lei Complementar Estadual 90/2013[10];Norte
+TO;Tocantins;Gurupi;Gurupi;Lei Complementar Estadual 93/2014[11];Norte
+GO;Goiás;Goiânia;Goiânia;Lei Complementar Estadual 27/1999[2];Centro-Oeste
+MT;Mato Grosso;Vale do Rio Cuiabá;Cuiabá;Lei Complementar Estadual 359/2009[3];Centro-Oeste
