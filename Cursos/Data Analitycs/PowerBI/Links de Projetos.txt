@@ -1,7 +1,0 @@
-PROJETO RH
-
-https://app.powerbi.com/view?r=eyJrIjoiY2NlY2YwYzItNmVhMC00MGQzLWJjODItMzg2NWUwZGE0ODcyIiwidCI6IjhiNGY5MjIwLWNjYWYtNDNiOS1hZWQ1LTlmMDFkZTIxMDc2YiJ9&embedImagePlaceholder=true
-
-RH NOVO
-
-https://app.powerbi.com/view?r=eyJrIjoiZWYyNTExNmUtYWFmYS00MjY4LWJlNjctMzk1NDQyN2U5MzQ1IiwidCI6IjhiNGY5MjIwLWNjYWYtNDNiOS1hZWQ1LTlmMDFkZTIxMDc2YiJ9&pageName=ReportSectiona61691dd82523776d3e7
